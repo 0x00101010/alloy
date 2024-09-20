@@ -56,13 +56,13 @@ pub const BYTES_PER_BLOB: usize = 131_072;
 pub const MAX_DATA_GAS_PER_BLOCK: u64 = 786_432u64; // 0xC0000 = 6 * 0x20000
 
 /// Target data gas for data blobs in a single block.
-pub const TARGET_DATA_GAS_PER_BLOCK: u64 = 393_216u64; // 0x60000 = 3 * 0x20000
+pub const TARGET_DATA_GAS_PER_BLOCK: u64 = 655_360u64; // 0x60000 = 5 * 0x20000
 
 /// Maximum number of data blobs in a single block.
 pub const MAX_BLOBS_PER_BLOCK: usize = (MAX_DATA_GAS_PER_BLOCK / DATA_GAS_PER_BLOB) as usize; // 786432 / 131072  = 6
 
 /// Target number of data blobs in a single block.
-pub const TARGET_BLOBS_PER_BLOCK: u64 = TARGET_DATA_GAS_PER_BLOCK / DATA_GAS_PER_BLOB; // 393216 / 131072 = 3
+pub const TARGET_BLOBS_PER_BLOCK: u64 = TARGET_DATA_GAS_PER_BLOCK / DATA_GAS_PER_BLOB; // 393216 / 131072 = 5
 
 /// Determines the maximum rate of change for blob fee
 pub const BLOB_GASPRICE_UPDATE_FRACTION: u128 = 3_338_477u128; // 3338477
